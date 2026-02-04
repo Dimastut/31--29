@@ -1,5 +1,5 @@
 import pytest
-from functions import add, get_user_full_name, divide, is_valid_password,  test_password_too_short, test_password_boundary
+from functions import add, get_user_full_name, divide, is_valid_password
 # from pytest import markers 
 @pytest.mark.math
 def test_add():
@@ -73,13 +73,15 @@ def test_password_valid():
  result = is_valid_password(password)
  assert result == True
 
- def test_password_too_short():
+
+def test_password_too_short():
   password = "12345"
   result =  is_valid_password(password)
   assert result == False
 
-  def test_password_boundary ():
+
+def test_password_boundary ():
    password = "12345678"
    result =  is_valid_password(password)
-   assert result = True
+   assert result == True
 
